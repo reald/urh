@@ -107,10 +107,12 @@ DEVICE_CONFIG["SDRPlay"] = {
 }
 
 # https://wiki.analog.com/university/tools/pluto/devs/specs
+# https://www.rtl-sdr.com/adalm-pluto-sdr-hack-tune-70-mhz-to-6-ghz-and-gqrx-install/
+# LO tuning range and bandwith for AD9364 compatiblity mode
 DEVICE_CONFIG["PlutoSDR"] = {
     "center_freq": dev_range(start=70*M, stop=6 * G, step=1),
     "sample_rate": dev_range(start=65.1 * K, stop=61.44 * M, step=1),
-    "bandwidth": dev_range(start=200 * K, stop=20 * M, step=1),
+    "bandwidth": dev_range(start=200 * K, stop=56 * M, step=1),
     "rx_rf_gain":  list(range(0, 74)),
 }
 
