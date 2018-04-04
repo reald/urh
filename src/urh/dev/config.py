@@ -106,6 +106,14 @@ DEVICE_CONFIG["SDRPlay"] = {
     "rx_antenna_default_index": 0,
 }
 
+# https://wiki.analog.com/university/tools/pluto/devs/specs
+DEVICE_CONFIG["PlutoSDR"] = {
+    "center_freq": dev_range(start=70*M, stop=6 * G, step=1),
+    "sample_rate": dev_range(start=65.1 * K, stop=61.44 * M, step=1),
+    "bandwidth": dev_range(start=200 * K, stop=20 * M, step=1),
+    "rx_rf_gain":  list(range(0, 74)),
+}
+
 DEVICE_CONFIG["Fallback"] = {
     "center_freq": dev_range(start=1*M, stop=6 * G, step=1),
     "sample_rate": dev_range(start=2 * M, stop=20 * M, step=1),

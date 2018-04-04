@@ -38,3 +38,6 @@ src/urh/cythonext/*.html
 /tests/show_gui
 
 misc/*
+
+# backup files
+*~
