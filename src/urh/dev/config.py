@@ -114,6 +114,7 @@ DEVICE_CONFIG["PlutoSDR"] = {
     "sample_rate": dev_range(start=65.1 * K, stop=61.44 * M, step=1),
     "bandwidth": dev_range(start=200 * K, stop=56 * M, step=1),
     "rx_rf_gain":  list(range(0, 74)),
+    "tx_rf_gain":  list(range(0, 11)),
 }
 
 DEVICE_CONFIG["Fallback"] = {

@@ -33,7 +33,7 @@ class top_block(gr.top_block):
         ##################################################
         # Blocks
         ##################################################
-        self.zeromq_push_sink_0 = zeromq.push_sink(gr.sizeof_gr_complex, 1, "tcp://127.0.0.1:1337", 10000, False, -1)
+        self.zeromq_push_sink_0 = zeromq.push_sink(gr.sizeof_gr_complex, 1, 'tcp://127.0.0.1:'+str(port), 100, False, -1)
         self.pluto_source_0 = iio.pluto_source("", int(freq), int(samp_rate), int(bw), 0x8000, True, True, True, "manual", gain, "", True)
 
         ##################################################
